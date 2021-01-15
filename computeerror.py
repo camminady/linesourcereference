@@ -1,10 +1,9 @@
 import numpy as np
 from scipy.interpolate import interp1d
-from .linesourceexact import getsol
 from scipy.integrate.quadpack import dblquad
 
 
-def rhoreference(n, type="middle"):
+def getreferencephi(n, type="middle"):
     # Creates the reference solution on a 2d grid of sice nxn. No ghostcells
 
     tmp = getsol()
